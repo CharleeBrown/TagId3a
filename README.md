@@ -1,2 +1,3 @@
-﻿## TagEdit
-### Is a tag editing program written in C#. 
+﻿## TagId3a
+### A tag editing program written in C#. 
+
