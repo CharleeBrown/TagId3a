@@ -23,6 +23,7 @@ namespace TagEdit
 
         public Form1()
         {
+            
           
             InitializeComponent();
             listView1.Columns.Add("Title");
@@ -33,6 +34,8 @@ namespace TagEdit
             listView1.Columns[1].Width = 110;
             listView1.Columns[2].Width = 90;
             listView1.View = View.Details;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +73,7 @@ namespace TagEdit
                 albumBox.Text = tFile.Tag.Album.ToString();
                 titleBox.Text = tFile.Tag.Title.ToString();
                 artistBox.Text = tFile.Tag.Performers.ToString();
+                pathBox.Text = item.SubItems[3].Text;
             }
         }
     }
@@ -87,37 +91,10 @@ namespace TagEdit
     }
     public class ChangeData
     {
-       // var results = name.Split(new string[] { " - ", ".m4a" }, StringSplitOptions.RemoveEmptyEntries);
-        //string pattern = @"[aeiotu]_[a-z]";
-        //Regex r = new Regex(pattern, RegexOptions.IgnoreCase);
-        //r.Match(results[1].ToString());
-        //foreach (Match mat in r.Matches(name))
-        //{
-        //    mat.Value.Replace("_", "'");
-        //    MessageBox.Show(mat.Value.Replace("_", "'").ToString());
-        //    MessageBox.Show(mat.Value);
-        //   // tFile.Tag.Comment = newMat;
-        //    //tFile.Save();
-        //}
-
-
-
-        // MessageBox.Show(tFile.Name.Substring(0, 20));
-        //tFile.Tag.Album = "Persona 4 OST";
-
-        // tFile.Tag.Track = 0;
-
-        //tFile.Tag.Track = Convert.ToUInt32(Convert.ToString(info.Name[16]) + Convert.ToString(info.Name[17]));
-
-        //MessageBox.Show(info.Name);
-        //MessageBox.Show(tFile.Tag.Album.ToString());
-        //ListViewItem item = new ListViewItem(tFile.Tag.Title);
-        //item.SubItems.Add(tFile.Tag.Album);
-        //item.SubItems.Add(Path.GetFullPath(info.FullName));
-        //listView1.Items.Add(item);
-        //tFile.Save();
-
-        // listView1.Items.Add(new ListItem { Name = tFile.Tag.Title, Album = tFile.Tag.Album,Value=Path.GetFullPath(info.FullName) });
+        public void SaveChange()
+        {
+            // 
+        }
 
     }
 }
